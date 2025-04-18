@@ -1,0 +1,12 @@
+[verilog]
+include_paths = [".", "source", "build/source"]
+defines = ["DEBUG"]
+
+[option]
+linter = true
+
+[textrules]
+style_semicolon = true
+
+[syntaxrules]
+style_trailingwhitespace = true

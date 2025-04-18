@@ -1,0 +1,19 @@
+module led_loop(
+	input			clk,
+	input	reg		right,
+	output	reg		LED_INDEX
+);
+	always @(posedge clk) begin
+		LED_INDEX = 0;
+		if (right == 1'b1) begin
+			LED_INDEX = LED_INDEX + 1;
+			if (LED_INDEX == 5'b11000)
+				right = 1'b0;
+		end
+		else if (right == 1'b0) begin
+			LED_INDEX = LED_INDEX - 1;
+			if (LED_INDEX == 5'b00000)
+				right = 1'b1;
+		end
+	end
+endmodule
