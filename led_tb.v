@@ -1,17 +1,18 @@
-module led_loop_tb();
+module led_loop_tb(
+	output [5:0] LED
+);
 
 	reg righto;
 	reg clk;
-	reg [5:0] LED;
 	localparam DURATION = 100000;
-	led_loop led_instance(
-		.right(righto),
+	top_module led_instance(
+		// .right(righto),
 		.LED_INDEX(LED),
 		.clk(clk)
 	);
 
 	initial begin
-		righto = 1'b1;
+		// righto = 1'b1;
 		clk = ~clk;
 		#10;
 		clk = ~clk;

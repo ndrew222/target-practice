@@ -1,8 +1,8 @@
-module led_loop(
+module top_module(
 	input			clk,
-	input	reg		right,
 	output	reg		LED_INDEX
 );
+	reg right;
 	always @(posedge clk) begin
 		LED_INDEX = 0;
 		if (right == 1'b1) begin
