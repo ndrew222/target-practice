@@ -1,2 +1,5 @@
 obj_dir
 *.fish
+.sconsign.dblite
+*.out
+*.vcd
